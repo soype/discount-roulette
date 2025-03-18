@@ -4,6 +4,30 @@
   justify-content: center;
 }
 
+.roulette {
+  border: solid 5px black;
+  border-radius: 100%;
+  position: relative;
+}
+.roulette__background {
+  background-color: beige;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+.roulette__border {
+  background-color: black;
+  -webkit-clip-path: polygon(1% 0, 0 1%, 49% 50%, 0 99%, 1% 100%, 50% 51%, 99% 100%, 100% 99%, 51% 50%, 100% 1%, 99% 0, 50% 49%);
+          clip-path: polygon(1% 0, 0 1%, 49% 50%, 0 99%, 1% 100%, 50% 51%, 99% 100%, 100% 99%, 51% 50%, 100% 1%, 99% 0, 50% 49%);
+  position: absolute;
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+}
+.roulette .border-2 {
+  rotate: 45deg;
+}
 .roulette__options {
   display: flex;
   flex-direction: column;
@@ -12,6 +36,7 @@
   overflow: hidden;
   border-radius: 100%;
   position: relative;
+  rotate: 0deg;
 }
 .roulette__half {
   width: 400px;
@@ -40,7 +65,7 @@
   padding-top: 1.5rem;
 }
 .roulette__option:nth-child(1) {
-  transform: rotate(-65deg) translatex(-58px) translateY(10px);
+  transform: rotate(-70deg) translatex(-58px) translateY(5px);
   position: absolute;
   z-index: 99;
 }
@@ -61,12 +86,30 @@
 }
 .roulette__center {
   position: absolute;
-  width: 50px;
-  height: 50px;
-  background-color: #f29d20;
+  width: 200px;
+  height: 200px;
+  background-color: black;
   border-radius: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.roulette__center img {
+  margin-bottom: 10px;
+}
+.roulette__center::before {
+  content: "";
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background-color: black;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  -webkit-clip-path: polygon(50% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(50% 0, 100% 100%, 0% 100%);
 }/*# sourceMappingURL=roulette.css.map */
