@@ -4,19 +4,19 @@
   justify-content: center;
 }
 
-.roulette {
+.wheel {
   border: solid 5px black;
   border-radius: 100%;
   position: relative;
 }
-.roulette__background {
+.wheel__background {
   background-color: beige;
   height: 100%;
   width: 100%;
   position: absolute;
   z-index: -1;
 }
-.roulette__border {
+.wheel__border {
   background-color: black;
   -webkit-clip-path: polygon(1% 0, 0 1%, 49% 50%, 0 99%, 1% 100%, 50% 51%, 99% 100%, 100% 99%, 51% 50%, 100% 1%, 99% 0, 50% 49%);
           clip-path: polygon(1% 0, 0 1%, 49% 50%, 0 99%, 1% 100%, 50% 51%, 99% 100%, 100% 99%, 51% 50%, 100% 1%, 99% 0, 50% 49%);
@@ -25,10 +25,10 @@
   height: 100%;
   width: 100%;
 }
-.roulette .border-2 {
+.wheel .border-2 {
   rotate: 45deg;
 }
-.roulette__options {
+.wheel__options {
   display: flex;
   flex-direction: column;
   width: 400px;
@@ -36,21 +36,20 @@
   overflow: hidden;
   border-radius: 100%;
   position: relative;
-  rotate: 0deg;
 }
-.roulette__half {
+.wheel__half {
   width: 400px;
   height: 400px;
   display: flex;
   gap: 1px;
 }
-.roulette .half-1 {
+.wheel .half-1 {
   transform: translateX(75px);
 }
-.roulette .half-2 {
+.wheel .half-2 {
   transform: rotate(180deg) translateX(72.5px);
 }
-.roulette__option {
+.wheel__option {
   flex: 1;
   position: relative;
   display: flex;
@@ -60,31 +59,31 @@
   height: 200px;
   width: 100px;
 }
-.roulette__option p {
+.wheel__option p {
   text-align: center;
   padding-top: 1.5rem;
 }
-.roulette__option:nth-child(1) {
+.wheel__option:nth-child(1) {
   transform: rotate(-70deg) translatex(-58px) translateY(5px);
   position: absolute;
   z-index: 99;
 }
-.roulette__option:nth-child(2) {
+.wheel__option:nth-child(2) {
   transform: rotate(-25deg) translateX(30px) translateY(20px);
   position: absolute;
   z-index: 99;
 }
-.roulette__option:nth-child(3) {
+.wheel__option:nth-child(3) {
   transform: rotate(25deg) translateX(110px) translateY(-50px);
   position: absolute;
   z-index: 99;
 }
-.roulette__option:nth-child(4) {
-  transform: rotate(70deg) translateX(119px) translateY(-140px);
+.wheel__option:nth-child(4) {
+  transform: rotate(70deg) translateX(117px) translateY(-140px);
   position: absolute;
   z-index: 99;
 }
-.roulette__center {
+.wheel__center {
   position: absolute;
   width: 200px;
   height: 200px;
@@ -93,15 +92,22 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2;
+  z-index: 4;
+  border: none;
+  transition: all 0.3s ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.roulette__center img {
+.wheel__center:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.wheel__center img {
   margin-bottom: 10px;
 }
-.roulette__center::before {
+.wheel__center::before {
   content: "";
   position: absolute;
   height: 40px;
@@ -112,4 +118,4 @@
   transform: translate(-50%, -60%);
   -webkit-clip-path: polygon(50% 0, 100% 100%, 0% 100%);
           clip-path: polygon(50% 0, 100% 100%, 0% 100%);
-}/*# sourceMappingURL=roulette.css.map */
+}/*# sourceMappingURL=wheel.css.map */
