@@ -12,6 +12,10 @@ function rotateWheel() {
     currentRotate = parseInt(currentRotate) || 0;
 
     rotate = Math.floor(Math.random() * (720 - 1080 + 1)) + 1080;
+    // If rotate is too close to a multiple of 45 degrees, add a couple degrees to the angle
+    if (Math.abs(rotate - 45) < 45) {
+        rotate += 2;
+    }
     options.style.transform = `rotate(${currentRotate + rotate}deg)`;
 
 }
