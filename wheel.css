@@ -36,6 +36,7 @@
   overflow: hidden;
   border-radius: 100%;
   position: relative;
+  transition: 3s ease-out;
 }
 .wheel__half {
   width: 400px;
@@ -74,7 +75,7 @@
   z-index: 99;
 }
 .wheel__option:nth-child(3) {
-  transform: rotate(25deg) translateX(110px) translateY(-50px);
+  transform: rotate(25deg) translateX(106px) translateY(-50px);
   position: absolute;
   z-index: 99;
 }

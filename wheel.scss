@@ -43,15 +43,14 @@
       overflow: hidden;
       border-radius: 100%;
       position: relative;
-    //   rotate: $rotate;
+      transition: 3s ease-out;
     }
   
     &__half {
       width: 400px;
       height: 400px;
       display: flex;
-    //   flex-direction: column;
-      gap: 1px; // Gap between slices
+      gap: 1px;
     }
 
     .half-1{
@@ -87,7 +86,7 @@
         z-index: 99;
       }
       &:nth-child(3){
-        transform: rotate(25deg) translateX(110px) translateY(-50px);
+        transform: rotate(25deg) translateX(106px) translateY(-50px);
         position: absolute;
         z-index: 99;
       }
