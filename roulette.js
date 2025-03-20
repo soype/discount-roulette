@@ -7,7 +7,7 @@ let timesRotated = 0;
 
 function rotateWheel() {
     let currentRotate = options.style.transform;
-    timesRotated++;
+    
     currentRotate = currentRotate.replace('rotate(', '').replace('deg)', '');
     currentRotate = parseInt(currentRotate) || 0;
 
@@ -17,6 +17,11 @@ function rotateWheel() {
         rotate += 2;
     }
     options.style.transform = `rotate(${currentRotate + rotate}deg)`;
+
+    const finalOption = Math.floor((rotate - (timesRotated * 1080 ) - 720) / 45) + 1;
+    console.log('Final option: ', finalOption);
+    const selectedOption = document.getElementById(`option-${finalOption}`);
+    console.log(selectedOption.children[0].innerHTML)
 
 }
 

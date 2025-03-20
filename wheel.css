@@ -46,7 +46,6 @@
 }
 .wheel .half-1 {
   transform: translateX(75px);
-  background-color: red;
 }
 .wheel .half-2 {
   transform: rotate(180deg) translateX(72.5px);
