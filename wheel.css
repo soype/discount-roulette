@@ -1,7 +1,44 @@
 .modal {
-  width: 100%;
   display: flex;
   justify-content: center;
+  opacity: 0;
+  transition: all 1s;
+}
+.modal__container {
+  z-index: 1;
+}
+.modal__backdrop {
+  background: black;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.modal__post {
+  opacity: 0;
+  transition: all 1s 3.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+.modal__post-continue {
+  color: white;
+  background: black;
+  border: none;
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.modal__post-text {
+  font-size: 1rem;
+  color: beige;
+  text-align: center;
 }
 
 .wheel {
@@ -27,6 +64,34 @@
 }
 .wheel .border-2 {
   rotate: 45deg;
+}
+.wheel__final {
+  position: absolute;
+  top: -10px;
+  width: 400px;
+  height: 400px;
+  background: black;
+  border-radius: 50%;
+  left: -10px;
+  border: 10px solid beige;
+  z-index: 4;
+  opacity: 0;
+  transition: all 1s 3.5s;
+}
+.wheel__final-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  padding-top: 4rem;
+  gap: 1.5rem;
+}
+.wheel__final-coupon {
+  margin-top: -1rem;
+  background: beige;
+  color: black;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
 }
 .wheel__options {
   display: flex;
@@ -93,7 +158,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 4;
+  z-index: 5;
   border: none;
   transition: all 0.3s ease-in-out;
   display: flex;
