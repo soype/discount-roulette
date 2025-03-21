@@ -7,61 +7,63 @@
     <link rel="stylesheet" href="wheel.css" />
   </head>
   <body>
-    <div class="modal__backdrop"></div>
-    <div class="modal">
-      <div class="modal__container">
-        <div class="wheel">
-          <div class="wheel__options" style="transform: rotate(0deg)">
-            <div class="wheel__half half-1">
-              <div class="wheel__option" id="option-2">
-                <p>10% OFF</p>
+    <div class="roulette__modal">
+      <div class="modal__backdrop"><span></span></div>
+      <div class="modal">
+        <div class="roulette__container">
+          <div class="wheel">
+            <div class="wheel__options" style="transform: rotate(0deg)">
+              <div class="wheel__half half-1">
+                <div class="wheel__option" id="option-2">
+                  <p>10% OFF</p>
+                </div>
+                <div class="wheel__option" id="option-1">
+                  <p>10% OFF</p>
+                </div>
+                <div class="wheel__option" id="option-8">
+                  <p>ENVÍO GRATIS</p>
+                </div>
+                <div class="wheel__option" id="option-7">
+                  <p>5% OFF</p>
+                </div>
               </div>
-              <div class="wheel__option" id="option-1">
-                <p>10% OFF</p>
+              <div class="wheel__half half-2">
+                <div class="wheel__option" id="option-6">
+                  <p>10% OFF</p>
+                </div>
+                <div class="wheel__option" id="option-5">
+                  <p>10% OFF</p>
+                </div>
+                <div class="wheel__option" id="option-4">
+                  <p>ENVÍO GRATIS</p>
+                </div>
+                <div class="wheel__option" id="option-3">
+                  <p>5% OFF</p>
+                </div>
               </div>
-              <div class="wheel__option" id="option-8">
-                <p>ENVÍO GRATIS</p>
-              </div>
-              <div class="wheel__option" id="option-7">
-                <p>5% OFF</p>
+              <div class="wheel__background"><span></span></div>
+              <div class="wheel__border border-1"><span></span></div>
+              <div class="wheel__border border-2"><span></span></div>
+            </div>
+            <button class="wheel__center">
+              <img src="https://cdn.shopify.com/s/files/1/0612/0846/1568/files/MDT_LOGO_blanco_79c3e232-778e-4d8e-bcf2-64eea8743ccf.png?v=1721159873" height="auto" width="160" alt="Metro de Tela" />
+            </button>
+            <div class="wheel__final">
+              <div class="wheel__final-content">
+                <p class="wheel__final-text-1">TE GANASTE UN:</p>
+                <h2 class="wheel__final-text-title" id="success"></h2>
+                <p class="wheel__final-text-2">TU CUPÓN DE DESCUENTO ES</p>
+                <p class="wheel__final-coupon"></p>
               </div>
             </div>
-            <div class="wheel__half half-2">
-              <div class="wheel__option" id="option-6">
-                <p>10% OFF</p>
-              </div>
-              <div class="wheel__option" id="option-5">
-                <p>10% OFF</p>
-              </div>
-              <div class="wheel__option" id="option-4">
-                <p>ENVÍO GRATIS</p>
-              </div>
-              <div class="wheel__option" id="option-3">
-                <p>5% OFF</p>
-              </div>
-            </div>
-            <div class="wheel__background"></div>
-            <div class="wheel__border border-1"></div>
-            <div class="wheel__border border-2"></div>
           </div>
-          <button class="wheel__center">
-            <img src="/MDT LOGO.png" alt="Metro de Tela" />
-          </button>
-          <div class="wheel__final">
-            <div class="wheel__final-content">
-              <p class="wheel__final-text-1">TE GANASTE UN:</p>
-              <h2 id="success"></h2>
-              <p class="wheel__final-text-2">TU CUPÓN DE DESCUENTO ES</p>
-              <p class="wheel__final-coupon"></p>
-            </div>
+          <div class="firework"><span></span></div>
+          <div class="firework"><span></span></div>
+          <div class="firework"><span></span></div>
+          <div class="modal__post opacity-0">
+            <button class="modal__post-continue">USAR MI DESCUENTO</button>
+            <p class="modal__post-text">Para aprovechar tu descuento, <br />agregalo en tu carrito cuando estés por pagar!</p>
           </div>
-        </div>
-        <div class="firework"></div>
-        <div class="firework"></div>
-        <div class="firework"></div>
-        <div class="modal__post opacity-0">
-          <button class="modal__post-continue">USAR MI DESCUENTO</button>
-          <p class="modal__post-text">Para aprovechar tu descuento, <br />agregalo en tu carrito cuando estés por pagar!</p>
         </div>
       </div>
     </div>

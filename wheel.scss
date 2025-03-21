@@ -1,15 +1,33 @@
 $beige: beige;
 
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.roulette__modal{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.roulette__container{
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .modal {
   display: flex;
   justify-content: center;
   opacity: 0;
   transition: all 1s;
-  padding-top: 3rem;
-
-  &__container{
-    z-index: 1;
-  }
+  padding-top: 12rem;
 
   &__backdrop{
     background: black;
@@ -18,8 +36,8 @@ $beige: beige;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    z-index: 0;
+    height: 500vh;
+    z-index: 1;
   }
 
   &__post {
@@ -37,14 +55,17 @@ $beige: beige;
       border: none;
       padding: 0.5rem 2rem;
       border-radius: 1rem;
-      font-size: 1rem;
+      font-size: 3rem;
       cursor: pointer;
     }
 
     &-text {
-      font-size: 1rem;
+      font-size: 2rem;
       color: $beige;
       text-align: center;
+      background-color: black;
+      padding: .5rem 1rem;
+      border-radius: 1rem;
     }
   }
 }
@@ -55,6 +76,7 @@ $wheel-width: 400px;
   border: solid 5px black;
   border-radius: 100%;
   position: relative;
+  width: 410px;
 
   &__background {
     background-color: $beige;
@@ -79,12 +101,12 @@ $wheel-width: 400px;
 
   &__final {
     position: absolute;
-    top: -10px;
+    top: 1px;
     width: 400px;
     height: 400px;
     background: black;
     border-radius: 50%;
-    left: -10px;
+    left: 0px;
     border: 10px solid$beige;
     z-index: 4;
     opacity: 0;
@@ -97,6 +119,10 @@ $wheel-width: 400px;
       color: white;
       padding-top: 4rem;
       gap: 1.5rem;
+    }
+
+    &-text-title{
+      color: $beige;
     }
 
     &-coupon {
@@ -182,6 +208,16 @@ $wheel-width: 400px;
     z-index: 5;
     border: none;
 
+    img{
+      height: auto;
+      width: 160px;
+
+      @media (max-width: 768px) {
+        width: 100px;
+        height: auto;
+      }
+    }
+
     transition: all 0.3s ease-in-out;
 
     &:hover {
@@ -215,11 +251,27 @@ $wheel-width: 400px;
 
 @media (max-width: 768px) {
 
+  .roulette__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .modal{
     overflow: hidden;
     padding-top: 3rem;
+
+    &__post{
+      &-continue{
+        font-size: 2.5rem;
+      }
+      &-text{
+        font-size: 1.5rem;
+      }
+    }
   }
   .wheel{
+    width: 310px;
     &__options{
       width: 300px;
       height: 300px;
@@ -273,6 +325,11 @@ $wheel-width: 400px;
     &__final{
       width: 300px;
       height: 300px;
+
+      &-text-title{
+        margin: 0;
+        margin-bottom: .5rem;
+      }
       
       &-content{
         padding-top: 2rem;
