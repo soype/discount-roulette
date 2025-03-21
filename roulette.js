@@ -15,6 +15,9 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   }
+
+  button.addEventListener("click", rotateWheel);
+  closeButton.addEventListener("click", disableModal);
 });
 
 const disableModal = () => {
@@ -34,7 +37,6 @@ const closeButton = document.querySelector(".modal__post-continue");
 const coupons = ["SUERTE10", "SUERTE10", "SUERTE5", "ENVIOGRATIS", "SUERTE10", "SUERTE10", "SUERTE5", "ENVIOGRATIS"];
 
 let rotate = 0;
-let timesRotated = 0;
 
 function rotateWheel() {
   let currentRotate = options.style.transform;
@@ -49,7 +51,7 @@ function rotateWheel() {
   }
   options.style.transform = `rotate(${currentRotate + rotate}deg)`;
 
-  const finalOption = Math.floor((rotate - timesRotated * 1080 - 720) / 45) + 1;
+  const finalOption = Math.floor((rotate - 720) / 45) + 1;
   const selectedOption = document.getElementById(`option-${finalOption}`);
 
   const coupon = coupons[finalOption - 1];
@@ -77,6 +79,3 @@ function showSuccess(selectedOption, coupon, firstTime = true) {
     }, 3500)
   }
 }
-
-button.addEventListener("click", rotateWheel);
-closeButton.addEventListener("click", disableModal);
