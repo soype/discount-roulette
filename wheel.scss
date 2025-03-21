@@ -6,6 +6,7 @@ $beige: beige;
   justify-content: center;
   opacity: 0;
   transition: all 1s;
+  padding-top: 3rem;
 
   &__container{
     z-index: 1;
@@ -24,7 +25,7 @@ $beige: beige;
 
   &__post {
     opacity: 0;
-    transition: all 1s 3.5s;
+    transition: all 1s;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -88,7 +89,7 @@ $wheel-width: 400px;
     border: 10px solid$beige;
     z-index: 4;
     opacity: 0;
-    transition: all 1s 3.5s;
+    transition: all 1s;
 
     &-content {
       display: flex;
@@ -209,6 +210,79 @@ $wheel-width: 400px;
       transform: translate(-50%, -60%);
       // clip-path: polygon(0 50%, 50% 0, 100% 50%, 100% 100%, 0% 100%);
       clip-path: polygon(50% 0, 100% 100%, 0% 100%);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+  .modal{
+    overflow: hidden;
+    padding-top: 3rem;
+  }
+  .wheel{
+    &__options{
+      width: 300px;
+      height: 300px;
+    }
+
+    &__half{
+      width: 300px;
+      height: 300px;
+    }
+
+    .half-1{
+      transform: translateX(40px) translateY(-15px);
+    }
+
+    .half-2{
+      transform: rotate(180deg) translateX(30px) translateY(-15px);
+    }
+
+    &__center{
+      height: 150px;
+      width: 150px;
+    }
+
+    &__option{
+      height: 150px;
+      width: 75px;
+      font-size: 14px;
+
+      &:nth-child(1) {
+        transform: rotate(-70deg) translatex(-56px) translateY(20px);
+        position: absolute;
+        z-index: 99;
+      }
+      &:nth-child(2) {
+        transform: rotate(-25deg) translateX(35px) translateY(30px);
+        position: absolute;
+        z-index: 99;
+      }
+      &:nth-child(3) {
+        transform: rotate(25deg) translateX(105px) translateY(-38px);
+        position: absolute;
+        z-index: 99;
+      }
+      &:nth-child(4) {
+        transform: rotate(70deg) translateX(107px) translateY(-125px);
+        position: absolute;
+        z-index: 99;
+      }
+    }
+
+    &__final{
+      width: 300px;
+      height: 300px;
+      
+      &-content{
+        padding-top: 2rem;
+        gap: 0.5rem;
+      }
+
+      &-coupon{
+        margin-top: .5rem;
+      }
     }
   }
 }
